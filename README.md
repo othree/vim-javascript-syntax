@@ -13,33 +13,33 @@ For ES.Next features such as decorator, binding operator. Please install [es.nex
 
 ### Differences from jelera/vim-javascript-syntax
 
-I start a new project instead of send PR to jelera is because: jelera/vim-javascript-syntax is not so active. 
+I start a new project instead of sending PR to jelera is because: jelera/vim-javascript-syntax is not so active. 
 And I want to do lots of changes, including ES6 and other not confirmed standard support.
-Also, one of my goal is produce 100% correct syntax.
-But it hurt performance, so I prefer to create a new one instead of merge back.
+Also, one of my goals is to produce 100% correct syntax.
+But it hurt performance, so I prefer to create a new one instead of merging back.
 
 ### Installation
 
-Use pathogen or vundle is recommended. Vundle:
+Recommend use pathogen or Vundle. Vundle:
 
     Plugin 'othree/yajs.vim'
 
 ### 2.0
 
-Major change in 2.0 is the basic object/method data comes from Mozilla's WebIDL. Current master branch is 2.0 beta. If its not stable for you. You can `git checkout 1.6`.
+The major change in 2.0 is the basic object/method data comes from Mozilla's WebIDL. Current master branch is 2.0 beta. If it's not stable for you. You can `git checkout 1.6`.
 
 ### Performance Issue
 
-**yajs.vim** is not good on performance. If you are using a slower computer. You might feel lag while moving cursor. You can try disable [cursorline](http://vimdoc.sourceforge.net/htmldoc/options.html#%27cursorline%27) and [colorcolumn](http://vimdoc.sourceforge.net/htmldoc/options.html#%27colorcolumn%27), or reduce the number of [synmaxcol](http://vimdoc.sourceforge.net/htmldoc/options.html#%27synmaxcol%27). Another possible solution is change to [neovim](https://neovim.io/)
+**yajs.vim** is not good on performance. If you are using a slow computer. You might feel lag while moving the cursor. You can try disable [cursorline](http://vimdoc.sourceforge.net/htmldoc/options.html#%27cursorline%27) and [colorcolumn](http://vimdoc.sourceforge.net/htmldoc/options.html#%27colorcolumn%27), or reduce the number of [synmaxcol](http://vimdoc.sourceforge.net/htmldoc/options.html#%27synmaxcol%27). Another possible solution is change to [neovim](https://neovim.io/)
 
-If you still want cursorline highlight, some terminal have their built in support. Ex: iTerm2, Edit Profile -&gt; Colors -&gt; Cursor Colors.
+If you still want cursor line highlight, some terminal has their built-in support. Ex: iTerm2, Edit Profile -&gt; Colors -&gt; Cursor Colors.
 
 Credits
 -------
 
 - Jose Elera, [Enhanced Javascript syntax](http://www.vim.org/scripts/script.php?script_id=3425)
 - Zhao Yi, Claudio Fleiner, Scott Shattuck (This file is based on their hard work)
-- gumnos (From the #vim IRC Channel in Freenode) (Who helped me figured out the crazy Vim Regexes)
+- gumnos (From the #vim IRC Channel in Freenode) (Who helped me figure out the crazy Vim Regexes)
 
 Reference
 ---------
@@ -55,7 +55,7 @@ Reference
 Report Issue
 ------------
 
-Please send issue report to [github](https://github.com/othree/yajs.vim/issues). Provde sample code to help me debug.
+Please send issue report to [github](https://github.com/othree/yajs.vim/issues). Provide sample code to help me debug.
 
 Changes
 -------
