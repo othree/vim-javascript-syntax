@@ -16,6 +16,9 @@ files='
   es6-set
   es6-proxy
   es6-promise
+  es6-typed-array
+  es6-dataview
+  es6-bigint
   ecma-402
   node
   web
