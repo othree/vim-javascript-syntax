@@ -27,6 +27,7 @@ javascriptStringMethod:
   - link
   - localeCompare
   - match
+  - matchAll
   - normalize
   # - quote
   - padStart
