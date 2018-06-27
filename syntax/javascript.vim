@@ -302,6 +302,7 @@ runtime syntax/yajs/es6-promise.vim
 runtime syntax/yajs/es6-typed-array.vim
 runtime syntax/yajs/es6-dataview.vim
 runtime syntax/yajs/es6-bigint.vim
+runtime syntax/yajs/es6-generator.vim
 runtime syntax/yajs/ecma-402.vim
 runtime syntax/yajs/node.vim
 runtime syntax/yajs/web.vim

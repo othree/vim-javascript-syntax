@@ -19,6 +19,7 @@ files='
   es6-typed-array
   es6-dataview
   es6-bigint
+  es6-generator
   ecma-402
   node
   web
