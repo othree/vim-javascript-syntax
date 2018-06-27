@@ -190,11 +190,12 @@ syntax match   javascriptUnicodeEscapeSequence /\\u[0-9a-fA-F]\{4}/ nextgroup=@j
 syntax match   javascriptUnicodeEscapeSequence /\\u{[0-9a-fA-F]\+}/ nextgroup=@javascriptComments skipwhite skipempty
 
 " Number
-syntax match   javascriptNumber                /\<0[bB][01]\+\>/ nextgroup=@javascriptComments skipwhite skipempty
-syntax match   javascriptNumber                /\<0[oO][0-7]\+\>/ nextgroup=@javascriptComments skipwhite skipempty
-syntax match   javascriptNumber                /\<0[xX][0-9a-fA-F]\+\>/ nextgroup=@javascriptComments skipwhite skipempty
+syntax match   javascriptNumber                /\<0[bB][01]\+n\?\>/ nextgroup=@javascriptComments skipwhite skipempty
+syntax match   javascriptNumber                /\<0[oO][0-7]\+n\?\>/ nextgroup=@javascriptComments skipwhite skipempty
+syntax match   javascriptNumber                /\<0[xX][0-9a-fA-F]\+n\?\>/ nextgroup=@javascriptComments skipwhite skipempty
 syntax match   javascriptNumber                /[+-]\=\%(\d\+\.\d\+\|\d\+\|\.\d\+\)\%([eE][+-]\=\d\+\)\=\>/ nextgroup=@javascriptComments skipwhite skipempty
 syntax match   javascriptNumber                /[+-]\=\d\+\.\%([eE][+-]\=\d\+\)\=/ nextgroup=@javascriptComments skipwhite skipempty
+syntax match   javascriptNumber                /[+-]\=\d\+n\>/ nextgroup=@javascriptComments skipwhite skipempty
 
 syntax cluster javascriptTypes                 contains=javascriptString,javascriptTemplate,javascriptTagRef,javascriptRegexpString,javascriptNumber,javascriptBoolean,javascriptNull,javascriptArray
 syntax cluster javascriptValue                 contains=@javascriptTypes,@javascriptExpression,javascriptFuncKeyword,javascriptClassKeyword,javascriptObjectLiteral,javascriptIdentifier,javascriptIdentifierName,javascriptOperator,javascriptOpSymbols
