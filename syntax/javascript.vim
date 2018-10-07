@@ -340,7 +340,7 @@ else
   syntax region  javascriptBlock                 matchgroup=javascriptBraces start=/\([\^:]\s\*\)\=\zs{/ end=/}/ contains=@htmlJavaScript fold
 endif
 
-syntax match   javascriptObjectMethodName      contained /\k*\ze\_s*(/ nextgroup=javascriptFuncArg skipwhite skipempty
+syntax match   javascriptObjectMethodName      contained /[a-zA-Z0-9_$]\+\ze\_s*(/ nextgroup=javascriptFuncArg skipwhite skipempty
 syntax cluster javascriptObjectMethod          contains=javascriptMethodAccessor,javascriptObjectMethodName
 
 syntax match   javascriptMethodName            contained /\k\+/ nextgroup=javascriptFuncArg skipwhite skipempty
