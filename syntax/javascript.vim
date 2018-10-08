@@ -402,8 +402,8 @@ syntax region  javascriptFuncCallArg           contained matchgroup=javascriptPa
 syntax region  javascriptEventFuncCallArg      contained matchgroup=javascriptParens start=/(/ end=/)/ contains=@javascriptEventExpression,@javascriptComments
 
 
-syntax match   javascriptArrowFuncDef          /(\_[^)]*)\_s*=>/ contains=javascriptArrowFuncArg,javascriptComma,javascriptArrowFunc nextgroup=javascriptOperator,javascriptIdentifierName,javascriptBlock,javascriptArrowFuncDef,javascriptParenObjectLiteral,javascriptClassSuper,javascriptClassKeyword,javascriptAwaitFuncKeyword,@afterArrowFunc skipwhite skipempty
-syntax match   javascriptArrowFuncDef          /[a-zA-Z_$]\k*\_s*=>/ contains=javascriptArrowFuncArg,javascriptArrowFunc nextgroup=javascriptOperator,javascriptIdentifierName,javascriptBlock,javascriptArrowFuncDef,javascriptParenObjectLiteral,javascriptClassSuper,javascriptClassKeyword,javascriptAwaitFuncKeyword,@afterArrowFunc skipwhite skipempty
+syntax match   javascriptArrowFuncDef          /(\_[^()]*)\_s*=>/ contains=javascriptArrowFuncArg,javascriptComma,javascriptArrowFunc nextgroup=@afterArrowFunc skipwhite skipempty
+syntax match   javascriptArrowFuncDef          /[a-zA-Z_$]\k*\_s*=>/ contains=javascriptArrowFuncArg,javascriptArrowFunc nextgroup=@afterArrowFunc skipwhite skipempty
 syntax match   javascriptArrowFunc             /=>/
 syntax match   javascriptArrowFuncArg          contained /[a-zA-Z_$]\k*/
 syntax region  javascriptArrowFuncArg          contained matchgroup=javascriptParens start=/(/ end=/)/ contains=@javascriptFuncArgElements nextgroup=javascriptArrowFunc skipwhite skipwhite skipempty
@@ -424,7 +424,7 @@ syntax keyword javascriptAsyncFuncKeyword      async nextgroup=javascriptFuncKey
 syntax keyword javascriptAwaitFuncKeyword      await nextgroup=@javascriptExpression skipwhite
 
 syntax cluster javascriptExpression            add=javascriptAsyncFuncKeyword,javascriptAwaitFuncKeyword
-syntax cluster afterArrowFunc                  add=javascriptAsyncFuncKeyword
+syntax cluster afterArrowFunc                  add=javascriptOperator,javascriptIdentifierName,javascriptBlock,javascriptArrowFuncDef,javascriptParenObjectLiteral,javascriptClassSuper,javascriptClassKeyword,javascriptAsyncFuncKeyword,javascriptAwaitFuncKeyword
 
 if exists("did_javascript_hilink")
   HiLink javascriptReserved             Error
