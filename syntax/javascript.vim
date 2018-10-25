@@ -320,6 +320,8 @@ runtime syntax/yajs/web-broadcast.vim
 runtime syntax/yajs/web-payment.vim
 runtime syntax/yajs/web-encoding.vim
 runtime syntax/yajs/web-network.vim
+runtime syntax/yajs/web-geo.vim
+runtime syntax/yajs/web-clipboard.vim
 runtime syntax/yajs/dom-node.vim
 runtime syntax/yajs/dom-elem.vim
 runtime syntax/yajs/dom-form.vim

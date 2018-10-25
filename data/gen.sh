@@ -37,6 +37,7 @@ files='
   web-encoding
   web-network
   web-geo
+  web-clipboard
   dom-node
   dom-elem
   dom-form
